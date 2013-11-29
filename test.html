@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<head>
+<title>Amharic Quran With Audio</title>
+<link rel="apple-touch-icon" href="appleicon.png"/>
+
+<!-- the below script address added for test only-->
+<script src="jquery-latest.js"></script>
+<script src="jquery.mobile.custom.min.js"></script>
+<link rel="stylesheet" type="text/css" href="mobile.css" />
+<link href="jquery.mobile.custom.structure.min.css" rel="stylesheet" />
+<link href="jquery.mobile.custom.theme.min.css" rel="stylesheet" />
+     <link rel="stylesheet" type="text/css" href="mobile.css" />
+
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="appleicon.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="appleicon.png">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon-precomposed" href="appleicon.png">
+<!-- For Nokia -->
+<link rel="shortcut icon-precomposed" href="favicon.ico">
+<!-- For everything else -->
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!--iOS. Delete if not required -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<script type="text/javascript">
+    function prev() {
+        var selIndex = document.getElementById("Sura").selectedIndex - 1;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+        if (selIndex != -1) {
+            $('option:selected', 'select').removeAttr('selected');
+            $("#Sura").prop("selectedIndex", selIndex);
+        }
+        $('#SelTarget').load(selvalue);
+        $('#top-bar').show();
+        $(window).scrollTop(0);
+    }
+
+    function next() {
+        var selIndex = document.getElementById("Sura").selectedIndex + 1;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+
+        if (selIndex != 114) {
+            $('option:selected', 'select').removeAttr('selected');
+            $("#Sura").prop("selectedIndex", selIndex);
+        }
+        $('#SelTarget').load(selvalue);
+        $('#top-bar').show();
+        $(window).scrollTop(0);
+    }
+
+    function changethehtml() {
+        var selIndex = document.getElementById("Sura").selectedIndex;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+        $('#SelTarget').load(selvalue);
+        $('#top-bar').show();
+        $(window).scrollTop(0);
+
+    }
+
+
+    var tapflag = false;
+
+
+    $(document).ready(function () {
+        $('#Sura').click(function () {
+            $('#top-bar').hide();
+        });
+    });
+
+    $(document).ready(function () {
+        $('#SelTarget').load('fatiya.html');
+
+    });
+
+    $(document).ready('pageinit', function () {
+
+        $.mobile.changePage(index.html);
+    });
+
+
+</script>
+</head>
+<html>
+<body>
+<div data-role="page">			
+    test page
+   <a href="index.html" data-transition="slidefade">I'll Slide it to the right</a>
+
+    <!-- header -->
+    <!-- content -->
+    <!-- footer -->
+
+</div><!-- page -->
+<a href="#mypanel">Open panel</a>
+</body>
+</html>

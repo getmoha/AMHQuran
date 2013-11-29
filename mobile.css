@@ -1,0 +1,274 @@
+﻿@charset utf-8;
+@font-face {
+    font-family: 'AbyssinicaSILRegular';
+    src: url('abyssinica_sil.eot');
+    src: url('abyssinica_sil.eot?#iefix') format('embedded-opentype'),
+         url('abyssinica_sil.woff') format('woff'),
+         url('abyssinica_sil.ttf') format('truetype'),
+         url('abyssinica_sil.svg#AbyssinicaSILRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+form, fieldset, legend, label, textarea,
+table, caption, thead, tbody, tfoot, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: none;
+	font-family: 'AbyssinicaSILRegular';
+	text-align: left;
+	vertical-align: baseline;
+}
+
+ .halfam{width:50%;text-align:center}
+    .halfar{width:50%;text-align:center}
+
+select {  font-family: 'AbyssinicaSILRegular'; height:39px; }
+option {font-family: 'AbyssinicaSILRegular'; }
+
+
+h2 {
+	position:inherit;
+	line-height: 1.25;
+	font-size: 24px;
+	margin: 1em 0 0.25em 0;
+	color: #2c5f25;
+	font-family: 'AbyssinicaSILRegular';
+}
+
+p {
+	font-size:21px;
+	margin: 0 0 1em 0;
+	
+}
+
+#content
+{
+  font-family: 'AbyssinicaSILRegular';
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:16px;
+  padding-bottom:16px;
+}
+
+#wrapper {
+	position:relative;
+	width: 100%;
+	margin: 0 auto;
+	background-color:#ebf9d6;
+	font-family:AbyssinicaSILRegular;
+}
+
+body 
+{
+  font-family: AbyssinicaSILRegular;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+}
+
+h1
+{	
+	display:none;	
+}
+
+
+#sura
+{
+  top:25px;
+  height: 100%;
+  width: 100%;  
+  font-family: AbyssinicaSILRegular;
+  }
+  
+  #Sura  
+  {
+      height:36px;
+  }
+ 
+  #next
+  {
+    position:absolute;
+    height:39px;
+    top:3px;
+    left:260px;
+ }
+ 
+ #prev{
+	position:absolute;
+	height:39px;
+	top:3px;
+	left:200px;			
+}
+  
+#SelTitle{
+  font-family: AbyssinicaSILRegular;
+  font-size: 15px;
+  color: #2c5f25;
+  }
+
+.halfar {
+color: black;
+}
+ 
+
+.ui-btn-text
+{
+	display:none;
+}
+.ui-icon ui-icon-loading
+{
+ display: none;
+}
+
+
+#top-bar 
+{
+    display:block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+}
+
+.top-bar 
+{
+    display:block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45px;
+  background: transparent;
+}
+
+
+#topbar-inner {
+   padding-top:3px;
+   padding-bottom:3px;
+  height: 45px;
+  background: #86bb98;
+  clear:both;
+  
+  }
+
+.topbar-inner {
+   padding-top:3px;
+   padding-bottom:3px;
+  height: 45px;
+  background: #86bb98;
+  clear:both;
+  
+  }
+
+
+#bottom-bar 
+{
+    position:fixed;
+    bottom:0px;
+  display:none;
+  width: 100%;
+  height: 45px;
+  background:  rgba(0,0,0,0.58);
+  float:left;
+}
+
+
+#bottombar-inner-first 
+{
+  position:absolute;
+  left:15px;
+  padding-top:3px;
+  padding-bottom:3px;
+  height: 45px;
+  background:  transparent;
+  float:left;
+  clear:both; 
+}
+
+#bottombar-inner-second 
+{
+  position:absolute;
+  left:85px;
+  padding-top:3px;
+  padding-bottom:3px;
+  height: 45px;
+  background: transparent;
+  float:left;
+  clear:both;
+}
+
+  #infinite_scroll{height:200px;overflow-y:scroll;margin-top:50px;border:1px solid #ccc;padding:10px;}
+       #infinite_scroll a{font-weight:bold;}
+       #infinite_scroll p{margin-bottom:20px;width:90%}
+       .loading{text-align:right;margin-top:-100px}
+
+
+
+#mainouter {
+  top:45px;
+  padding-top: 16px;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:16px;
+  padding-bottom:16px;
+  background-color:#ebf9d6;
+  min-height: 100%;
+  font-family: AbyssinicaSILRegular;
+  clear:both;
+}
+
+.break
+{
+	clear:both;
+}
+
+#play
+{
+    position:absolute;
+    width:39px;
+    height:39px;
+    left:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+
+}
+#pause
+{
+    position:absolute;
+    width:39px;
+    height:39px;
+    left:20px;
+    padding-top:3px;
+    padding-bottom:3px;
+
+}
+
+
+@font-face {
+    font-family: 'gfzemen';
+    src: url('gfzemen.eot');
+    src: url('gfzemen.eot?#iefix') format('embedded-opentype'),
+         url('gfzemen.woff') format('woff'),
+         url('gfzemen.ttf') format('truetype'),
+         url('gfzemen.svg#gfzeme') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

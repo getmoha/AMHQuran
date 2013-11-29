@@ -1,0 +1,231 @@
+﻿
+<!DOCTYPE HTML>
+<head>
+<link rel="apple-touch-icon" href="appleicon.png"/>
+<link rel="stylesheet" type="text/css" href="stylesheets/mobile.css" />
+<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" type="text/javascript"></script>
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0">
+
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="appleicon.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="appleicon">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon-precomposed" href="appleicon">
+<!-- For Nokia -->
+<link rel="shortcut icon" href="favicon.ico">
+<!-- For everything else -->
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!--iOS. Delete if not required -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-startup-image" href="favicon.ico">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+<script>
+function changethehtml()
+{
+  var selIndex = document.getElementById("Sura").selectedIndex;
+  var selvalue = document.getElementById("Sura").options[selIndex].value;
+	 $(document).ready(function(){
+         $('#SelTarget').load(selvalue);
+           });
+
+}
+</script>
+
+<style type="text/css">
+body {
+  margin: 0;
+  padding: 0;
+background:url('BG.jpg') repeat scroll left top;
+}
+
+#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 30px;
+  clear: both;
+}
+#Sura{
+  height: 25px;
+  width: 10%;
+  padding-top: 10px;
+}
+
+.ui-btn-text
+{
+ display: none;
+}
+.ui-icon ui-icon-loading
+{
+ display: none;
+}
+
+#topbar-inner {
+  height: 35px;
+  background: #bbb;
+}
+
+
+#mainouter {
+  position: relative;
+  z-index: 2;
+  padding-top: 40px;
+  padding-left:16px;
+  padding-right:16px;
+  padding-top:16px;
+  padding-bottom:16px;
+  background:url('BG.jpg') repeat scroll left top;
+  min-height: 100%;
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<div id="top-bar"> 
+<div id="topbar-inner">
+<div id="sura" name="sura">
+<select id="Sura" title="Text" onchange="changethehtml();">
+<option value="fatiya.html" style="font-family:AbyssinicaSILRegular;">አል-ፋቲሐህ</option>
+<option value="beqera.html" style="font-family:AbyssinicaSILRegular;">አል-በቀራህ</option>
+<option value="imrran.html" style="font-family:AbyssinicaSILRegular;">'Ali `Imran</option>
+<option value="nisa.html" style="font-family:AbyssinicaSILRegular;">An-Nisa'</option>
+<option value="maeda.html" style="font-family:AbyssinicaSILRegular;">Al-Ma'idah</option>
+<option value="anham.html" style="font-family:AbyssinicaSILRegular;">Al-'An`am</option>
+<option value="ahraf.html" style="font-family:AbyssinicaSILRegular;">አል-አዕራፍ</option>
+<option value="anful.html" style="font-family:AbyssinicaSILRegular;">Al-'Anfal</option>
+<option value="tewbah.html" style="font-family:AbyssinicaSILRegular;">At-Tawbah</option>
+<option value="yunus.html" style="font-family:AbyssinicaSILRegular;">Yunus</option>
+<option value="hud.html" style="font-family: AbyssinicaSILRegular;">Hud</option>
+<option value="yusuf.html" style="font-family:AbyssinicaSILRegular;">Yusuf</option>
+<option value="rehid.html" style="font-family:AbyssinicaSILRegular;">Ar-Ra`d</option>
+<option value="Ibrahim.html" style="font-family:AbyssinicaSILRegular;">'Ibrahim</option>
+<option value="hijir.html" style="font-family:AbyssinicaSILRegular;">Al-Hijr</option>
+<option value="nehil.html" style="font-family:AbyssinicaSILRegular;">An-Nahl</option>
+<option value="easrah.html" style="font-family:AbyssinicaSILRegular;">Al-'Isra'</option>
+<option value="kahif.html" style="font-family:AbyssinicaSILRegular;">Al-Kahf</option>
+<option value="merium.html" style="font-family:AbyssinicaSILRegular;">Maryam</option>
+<option value="taha.html" style="font-family:AbyssinicaSILRegular;">Taha</option>
+<option value="anbia.html" style="font-family:AbyssinicaSILRegular;">Al-'Anbya'</option>
+<option value="haj.html" style="font-family:AbyssinicaSILRegular;">Al-Haj</option>
+<option value="mueminun.html" style="font-family:AbyssinicaSILRegular;">Al-Mu'minun</option>
+<option value="nur.html" style="font-family:AbyssinicaSILRegular;">An-Nur</option>
+<option value="furkan.html" style="font-family:AbyssinicaSILRegular;">Al-Furqan</option>
+<option value="shuhara.html" style="font-family:AbyssinicaSILRegular;">Ash-Shu`ara'</option>
+<option value="nemil.html" style="font-family:AbyssinicaSILRegular;">An-Naml</option>
+<option value="kessos.html" style="font-family:AbyssinicaSILRegular;">Al-Qasas</option>
+<option value="hankebut.html" style="font-family:AbyssinicaSILRegular;">Al-`Ankabut</option>
+<option value="rome.html" style="font-family:AbyssinicaSILRegular;">Ar-Rum</option>
+<option value="lukmmanel.html" style="font-family:AbyssinicaSILRegular;">Luqman</option>
+<option value="sejdah.html" style="font-family:AbyssinicaSILRegular;">As-Sajdah</option>
+<option value="ahzab.html" style="font-family:AbyssinicaSILRegular;">አል-አሕዛብ</option>
+<option value="sebbah.html" style="font-family:AbyssinicaSILRegular;">Saba'</option>
+<option value="fatir.html" style="font-family:AbyssinicaSILRegular;">Fatir</option>
+<option value="yasin.html" style="font-family:AbyssinicaSILRegular;">Ya-Sin</option>
+<option value="safhfat.html" style="font-family:AbyssinicaSILRegular;">As-Saffat</option>
+<option value="suad.html" style="font-family:AbyssinicaSILRegular;">Sad</option>
+<option value="zumer.html" style="font-family:AbyssinicaSILRegular;">አዝ-ዙመር</option>
+<option value="gafir.html" style="font-family:AbyssinicaSILRegular;">Ghafir</option>
+<option value="hamim.html" style="font-family:AbyssinicaSILRegular;">Fussilat</option>
+<option value="shura.html" style="font-family:AbyssinicaSILRegular;">Ash-Shuraa</option>
+<option value="huruf.html" style="font-family:AbyssinicaSILRegular;">Az-Zukhruf</option>
+<option value="duhan.html" style="font-family:AbyssinicaSILRegular;">Ad-Dukhan</option>
+<option value="jasiyah.html" style="font-family:AbyssinicaSILRegular;">Al-Jathiyah</option>
+<option value="ahkaf.html" style="font-family:AbyssinicaSILRegular;">አል-አሕቃፍ</option>
+<option value="muhammad.html" style="font-family:AbyssinicaSILRegular;">Muhammad</option>
+<option value="fetih.html" style="font-family:AbyssinicaSILRegular;">Al-Fath</option>
+<option value="hujurat.html" style="font-family:AbyssinicaSILRegular;">Al-Hujurat</option>
+<option value="kaf.html" style="font-family:AbyssinicaSILRegular;">Qaf</option>
+<option value="zariyat.html" style="font-family:AbyssinicaSILRegular;">Adh-Dhariyat</option>
+<option value="tur.html" style="font-family:AbyssinicaSILRegular;">At-Tur</option>
+<option value="nejim.html" style="font-family:AbyssinicaSILRegular;">An-Najm</option>
+<option value="kemer.html" style="font-family:AbyssinicaSILRegular;">Al-Qamar</option>
+<option value="rahman.html" style="font-family:AbyssinicaSILRegular;">Ar-Rahman</option>
+<option value="wakiya.html" style="font-family:AbyssinicaSILRegular;">Al-Waqi`ah</option>
+<option value="hadid.html" style="font-family:AbyssinicaSILRegular;">Al-Hadid</option>
+<option value="mujadelah.html" style="font-family:AbyssinicaSILRegular;">Al-Mujadila</option>
+<option value="hasher.html" style="font-family:AbyssinicaSILRegular;">Al-Hashr</option>
+<option value="mumtehina.html" style="font-family:AbyssinicaSILRegular;">Al-Mumtahanah</option>
+<option value="sewf.html" style="font-family:AbyssinicaSILRegular;">As-Saf</option>
+<option value="jumea.html" style="font-family: AbyssinicaSILRegular;">Al-Jumu`ah</option>
+<option value="munafikun.html" style="font-family:AbyssinicaSILRegular;">Al-Munafiqun</option>
+<option value="tegabun.html" style="font-family:AbyssinicaSILRegular;">At-Taghabun</option>
+<option value="tolak.html" style="font-family:AbyssinicaSILRegular;">At-Talaq</option>
+<option value="tehrim.html" style="font-family:AbyssinicaSILRegular;">At-Tahrim</option>
+<option value="mulk.html" style="font-family:AbyssinicaSILRegular;">Al-Mulk</option>
+<option value="kelem.html" style="font-family:AbyssinicaSILRegular;">Al-Qalam</option>
+<option value="hakah.html" style="font-family:AbyssinicaSILRegular;">Al-Haqqah</option>
+<option value="mearij.html" style="font-family:AbyssinicaSILRegular;">Al-Ma`arij</option>
+<option value="nuh.html" style="font-family:AbyssinicaSILRegular;">Nuh</option>
+<option value="Jin.html" style="font-family:AbyssinicaSILRegular;">Al-Jinn</option>
+<option value="muzemil.html" style="font-family:AbyssinicaSILRegular;">Al-Muzzammil</option>
+<option value="mudesir.html" style="font-family:AbyssinicaSILRegular;">Al-Muddaththir</option>
+<option value="kiyamah.html" style="font-family:AbyssinicaSILRegular;">Al-Qiyamah</option>
+<option value="dehir.html" style="font-family:AbyssinicaSILRegular;">Al-'Insan</option>
+<option value="murselat.html" style="font-family:AbyssinicaSILRegular;">Al-Mursalat</option>
+<option value="nebah.html" style="font-family:AbyssinicaSILRegular;">An-Naba'</option>
+<option value="naziyat.html" style="font-family:AbyssinicaSILRegular;">An-Nazi`at</option>
+<option value="abese.html" style="font-family:AbyssinicaSILRegular;">`Abasa</option>
+<option value="tekwwir.html" style="font-family:AbyssinicaSILRegular;">At-Takwir</option>
+<option value="enfitar.html" style="font-family:AbyssinicaSILRegular;">Al-'Infitar</option>
+<option value="mutefifin.html" style="font-family:AbyssinicaSILRegular;">Al-Mutaffifin</option>
+<option value="enshikak.html" style="font-family:AbyssinicaSILRegular;">Al-'Inshiqaq</option>
+<option value="buruj.html" style="font-family:AbyssinicaSILRegular;">Al-Buruj</option>
+<option value="tarik.html" style="font-family:AbyssinicaSILRegular;">At-Tariq</option>
+<option value="ahila.html" style="font-family:AbyssinicaSILRegular;">አል-አዕላ</option>
+<option value="gashiya.html" style="font-family:AbyssinicaSILRegular;">Al-Ghashiyah</option>
+<option value="fejir.html" style="font-family:AbyssinicaSILRegular;">Al-Fajr</option>
+<option value="beled.html" style="font-family:AbyssinicaSILRegular;">Al-Balad</option>
+<option value="shemis.html" style="font-family:AbyssinicaSILRegular;">Ash-Shams</option>
+<option value="leyl.html" style="font-family:AbyssinicaSILRegular;">Al-Layl</option>
+<option value="duha.html" style="font-family:AbyssinicaSILRegular;">Ad-Duhaa</option>
+<option value="enshara.html" style="font-family:AbyssinicaSILRegular;">Ash-Sharh</option>
+<option value="tin.html" style="font-family: AbyssinicaSILRegular;">At-Tin</option>
+<option value="haleq.html" style="font-family:AbyssinicaSILRegular;">Al-`Alaq</option>
+<option value="qedir.html" style="font-family:AbyssinicaSILRegular;">Al-Qadr</option>
+<option value="beyyinah.html" style="font-family:AbyssinicaSILRegular;">Al-Bayyinah</option>
+<option value="zelzelah.html" style="font-family:AbyssinicaSILRegular;">Az-Zalzalah</option>
+<option value="adiyat.html" style="font-family:AbyssinicaSILRegular;">አል-ዓዲያት</option>
+<option value="qariya.html" style="font-family:AbyssinicaSILRegular;">Al-Qari`ah</option>
+<option value="tekasur.html" style="font-family:AbyssinicaSILRegular;">At-Takathur</option>
+<option value="asir.html" style="font-family:AbyssinicaSILRegular;">Al-`Asr</option>
+<option value="humezah.html" style="font-family:AbyssinicaSILRegular;">Al-Humazah</option>
+<option value="fill.html" style="font-family:AbyssinicaSILRegular;">Al-Fil</option>
+<option value="qureyish.html" style="font-family:AbyssinicaSILRegular;">Quraysh</option>
+<option value="mahun.html" style="font-family:AbyssinicaSILRegular;">Al-Ma`un</option>
+<option value="kewser.html" style="font-family:AbyssinicaSILRegular;">Al-Kawthar</option>
+<option value="kafirun.html" style="font-family:AbyssinicaSILRegular;">Al-Kafirun</option>
+<option value="nesir.html" style="font-family:AbyssinicaSILRegular;">An-Nasr</option>
+<option value="lehab.html" style="font-family:AbyssinicaSILRegular;">Al-Masad</option>
+<option value="ehhlas.html" style="font-family:AbyssinicaSILRegular;">Al-'Ikhlas</option>
+<option value="feleq.html" style="font-family:AbyssinicaSILRegular;">Al-Falaq</option>
+<option value="nas.html" style="font-family:AbyssinicaSILRegular;">An-Nas</option>
+</select>
+</div>
+</div>
+</div>
+
+<div id="mainouter"> 
+  <div id="SelTarget"></div>
+</div>
+
+</div>
+</body>
+</html>

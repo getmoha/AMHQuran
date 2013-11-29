@@ -1,0 +1,307 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Amharic Quran With Audio</title>
+<link rel="apple-touch-icon" href="appleicon.png"/>
+
+<!-- the below script address added for test only-->
+<script src="jquery-latest.js"></script>
+<script src="jquery.mobile.custom.min.js"></script>
+    <script src="scroll.js"></script>
+<link rel="stylesheet" type="text/css" href="mobile.css" />
+<link href="jquery.mobile.custom.structure.min.css" rel="stylesheet" />
+<link href="jquery.mobile.custom.theme.min.css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="mobile.css" />
+<script src="cordova.js"></script>
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+
+<!-- For iPhone 4 -->
+<link rel="apple-touch-icon" sizes="114x114" href="appleicon.png">
+<!-- For iPad 1-->
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="appleicon.png">
+<!-- For iPhone 3G, iPod Touch and Android -->
+<link rel="apple-touch-icon-precomposed" href="appleicon.png">
+<!-- For Nokia -->
+<link rel="shortcut icon-precomposed" href="favicon.ico">
+<!-- For everything else -->
+<link rel="shortcut icon" href="favicon.ico"/>
+
+<!--iOS. Delete if not required -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	
+
+<script type="text/javascript">
+    var currenturl;
+    function prev()
+    {
+        var selIndex = document.getElementById("Sura").selectedIndex - 1;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+            if(selIndex != -1)
+            {
+                $('option:selected', 'select').removeAttr('selected');
+                $("#Sura").prop("selectedIndex", selIndex);
+            }
+            currenturl = selvalue;
+            $('#SelTarget1').empty();
+            $.ajax({
+                url: selvalue,
+                success: function (data) {
+                    $('#SelTarget').html(data);
+                },
+                error: function () {
+
+                }
+            });
+            
+            $('#top-bar').show();
+            
+    }
+
+    function next()
+    {
+        var selIndex = document.getElementById("Sura").selectedIndex + 1;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+        $('#SelTarget1').empty();
+            if(selIndex != 114)
+            {
+                $('option:selected', 'select').removeAttr('selected');
+                $("#Sura").prop("selectedIndex", selIndex);
+            }
+            currenturl = selvalue;
+            $.ajax({
+                url: selvalue,
+                success: function (data) {
+                    $('#SelTarget').html(data);
+                },
+                error: function () {
+
+                }
+            });
+
+            if (selvalue == 'beqera.html') {
+                $.ajax({
+                    url: 'beqera1.html',
+                    success: function (data) {
+                        $('#SelTarget1').html(data);
+                    },
+                    error: function () {
+
+                    }
+                });
+            }
+
+            $('#top-bar').show();
+            
+    }
+
+    function changethehtml()
+    {
+        var selIndex = document.getElementById("Sura").selectedIndex;
+        var selvalue = document.getElementById("Sura").options[selIndex].value;
+        $('#SelTarget1').empty();
+        currenturl = selvalue;
+        $.ajax({
+            url: selvalue,
+            success: function (data) {
+                $('#SelTarget').html(data);
+            },
+            error: function () {
+
+            }
+        });
+
+        if (selvalue == 'beqera.html')
+        {
+            $.ajax({
+                url: 'beqera1.html',
+                success: function (data) {
+                    $('#SelTarget1').html(data);
+                },
+                error: function () {
+
+                }
+            });
+        }
+
+        $('#top-bar').show();
+       
+	
+    }
+
+
+var tapflag = false;
+$('#SelTarget').on('touchstart click', function (e) {
+    e.stopPropagation(); e.preventDefault();
+    $('#bottom-bar').css("display", "none");
+
+});
+
+$(document).ready(function () {
+    $('#Sura').click(function () {
+        $('#top-bar').hide();
+    });
+});
+
+$(document).ready(function () {
+    currenturl = 'fatiya.html';
+     $('#SelTarget').load('fatiya.html');
+
+ });
+
+</script>
+
+
+
+</head>
+<body>
+    
+
+<div data-role="page" id="wrapper">
+<div id="top-bar"> 
+<div id="topbar-inner">
+<div id="sura">
+<a id="aprev" href="Javascript:prev();"><img id="prev" src="quranprev.png" alt="Prev"  /></a><a id="anext" href="Javascript:next();"><img id="next" src="qurannext.png" alt="Next"  /></a>
+<select id="Sura" onchange="changethehtml();">
+<option value="fatiya.html">Al-Fatihah</option>
+<option value="beqera.html">Al-Baqarah</option>
+<option value="imrran.html">'Ali `Imran</option>
+<option value="nisa.html">An-Nisa'</option>
+<option value="maeda.html">Al-Ma'idah</option>
+<option value="anham.html">Al-'An`am</option>
+<option value="ahraf.html">Al-A'raf</option>
+<option value="anful.html">Al-'Anfal</option>
+<option value="tewbah.html">At-Tawbah</option>
+<option value="yunus.html" >Yunus</option>
+<option value="hud.html">Hud</option>
+<option value="yusuf.html">Yusuf</option>
+<option value="rehid.html">Ar-Ra`d</option>
+<option value="Ibrahim.html" >'Ibrahim</option>
+<option value="hijir.html">Al-Hijr</option>
+<option value="nehil.html">An-Nahl</option>
+<option value="easrah.html">Al-'Isra'</option>
+<option value="kahif.html">Al-Kahf</option>
+<option value="merium.html">Maryam</option>
+<option value="taha.html">Taha</option>
+<option value="anbia.html" >Al-'Anbya'</option>
+<option value="haj.html" >Al-Haj</option>
+<option value="mueminun.html" >Al-Mu'minun</option>
+<option value="nur.html" >An-Nur</option>
+<option value="furkan.html" >Al-Furqan</option>
+<option value="shuhara.html" >Ash-Shu`ara'</option>
+<option value="nemil.html" >An-Naml</option>
+<option value="kessos.html" >Al-Qasas</option>
+<option value="hankebut.html" >Al-`Ankabut</option>
+<option value="rome.html" >Ar-Rum</option>
+<option value="lukmmanel.html" >Luqman</option>
+<option value="sejdah.html" >As-Sajdah</option>
+<option value="ahzab.html" >Al-Ahzab</option>
+<option value="sebbah.html" >Saba'</option>
+<option value="fatir.html" >Fatir</option>
+<option value="yasin.html" >Ya-Sin</option>
+<option value="safhfat.html" >As-Saffat</option>
+<option value="suad.html" >Sad</option>
+<option value="zumer.html" >Az-Zumar</option>
+<option value="gafir.html" >Ghafir</option>
+<option value="hamim.html" >Fussilat</option>
+<option value="shura.html" >Ash-Shuraa</option>
+<option value="huruf.html" >Az-Zukhruf</option>
+<option value="duhan.html" >Ad-Dukhan</option>
+<option value="jasiyah.html" >Al-Jathiyah</option>
+<option value="ahkaf.html" >Al-Ahqaf</option>
+<option value="muhammad.html" >Muhammad</option>
+<option value="fetih.html" >Al-Fath</option>
+<option value="hujurat.html" >Al-Hujurat</option>
+<option value="kaf.html" >Qaf</option>
+<option value="zariyat.html" >Adh-Dhariyat</option>
+<option value="tur.html" >At-Tur</option>
+<option value="nejim.html" >An-Najm</option>
+<option value="kemer.html" >Al-Qamar</option>
+<option value="rahman.html" >Ar-Rahman</option>
+<option value="wakiya.html" >Al-Waqi`ah</option>
+<option value="hadid.html" >Al-Hadid</option>
+<option value="mujadelah.html" >Al-Mujadila</option>
+<option value="hasher.html" >Al-Hashr</option>
+<option value="mumtehina.html" >Al-Mumtahanah</option>
+<option value="sewf.html" >As-Saf</option>
+<option value="jumea.html">Al-Jumu`ah</option>
+<option value="munafikun.html" >Al-Munafiqun</option>
+<option value="tegabun.html" >At-Taghabun</option>
+<option value="tolak.html" >At-Talaq</option>
+<option value="tehrim.html" >At-Tahrim</option>
+<option value="mulk.html" >Al-Mulk</option>
+<option value="kelem.html" >Al-Qalam</option>
+<option value="hakah.html" >Al-Haqqah</option>
+<option value="mearij.html" >Al-Ma`arij</option>
+<option value="nuh.html" >Nuh</option>
+<option value="jin.html" >Al-Jinn</option>
+<option value="muzemil.html" >Al-Muzzammil</option>
+<option value="mudesir.html" >Al-Muddaththir</option>
+<option value="kiyamah.html" >Al-Qiyamah</option>
+<option value="dehir.html" >Al-'Insan</option>
+<option value="murselat.html" >Al-Mursalat</option>
+<option value="nebah.html" >An-Naba'</option>
+<option value="naziyat.html" >An-Nazi`at</option>
+<option value="abese.html" >`Abasa</option>
+<option value="tekwwir.html" >At-Takwir</option>
+<option value="enfitar.html" >Al-'Infitar</option>
+<option value="mutefifin.html" >Al-Mutaffifin</option>
+<option value="enshikak.html" >Al-'Inshiqaq</option>
+<option value="buruj.html" >Al-Buruj</option>
+<option value="tarik.html" >At-Tariq</option>
+<option value="ahila.html" >Al-A'la</option>
+<option value="gashiya.html" >Al-Ghashiyah</option>
+<option value="fejir.html" >Al-Fajr</option>
+<option value="beled.html" >Al-Balad</option>
+<option value="shemes.html" >Ash-Shams</option>
+<option value="leyl.html" >Al-Layl</option>
+<option value="duha.html" >Ad-Duhaa</option>
+<option value="enshara.html" >Ash-Sharh</option>
+<option value="tin.html">At-Tin</option>
+<option value="haleq.html" >Al-`Alaq</option>
+<option value="qedir.html" >Al-Qadr</option>
+<option value="beyyinah.html" >Al-Bayyinah</option>
+<option value="zelzelah.html" >Az-Zalzalah</option>
+<option value="adiyat.html" >Al-`Ādiyāt</option>
+<option value="qariya.html" >Al-Qari`ah</option>
+<option value="tekasur.html" >At-Takathur</option>
+<option value="asir.html" >Al-`Asr</option>
+<option value="humezah.html" >Al-Humazah</option>
+<option value="fill.html" >Al-Fil</option>
+<option value="qureyish.html" >Quraysh</option>
+<option value="mahun.html" >Al-Ma`un</option>
+<option value="kewser.html" >Al-Kawthar</option>
+<option value="kafirun.html" >Al-Kafirun</option>
+<option value="nesir.html" >An-Nasr</option>
+<option value="lehab.html" >Al-Masad</option>
+<option value="ehhlas.html" >Al-'Ikhlas</option>
+<option value="feleq.html" >Al-Falaq</option>
+<option value="nas.html" >An-Nas</option>
+</select>
+</div> <!-- end div sura -->
+</div> <!-- end topbar-inner -->
+</div> <!-- end tobbar -->
+<div id="mainouter">
+<br /><br />
+<div id="content_1" class="content">
+    <div id="SelTarget" class="scroll"></div>
+    <div id="SelTarget1"></div>
+</div>
+</div><!-- end mainouter -->
+<div id="bottom-bar" style="display:none;">
+    <div id="bottombar-inner-second ">
+        <a href="Settings.html"><span style="font-size:23px;font-family:AbyssinicaSILRegular">ማስተካከያ</span></a>
+        
+    </div>
+</div>
+</div><!-- end wrapper -->
+</body>
+</html>
+
+
